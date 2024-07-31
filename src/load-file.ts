@@ -37,7 +37,7 @@ export function fileLoaderInit() {
     return false;
   });
 
-  function progressHandler(event) {
+  function progressHandler(event: ProgressEvent) {
     // считаем размер загруженного и процент от полного размера
     const loadedMb = (event.loaded / BYTES_IN_MB).toFixed(1);
     const totalSizeMb = (event.total / BYTES_IN_MB).toFixed(1);
@@ -48,8 +48,16 @@ export function fileLoaderInit() {
     statusText.textContent = `Загружено ${percentLoaded}% | `;
   }
 
-  function loadHandler(event) {
-    statusText.textContent = event.target.responseText;
-    progressBar.value = String(0);
+  function loadHandler(event: ProgressEvent<XMLHttpRequest>) {
+    const target = event.target;
+     if (target.status != 200) {
+       // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
+       alert(`Ошибка ${target.status}: ${target.statusText}`); // Например, 404: Not Found
+     } else {
+       statusText.textContent = event.target.responseText;
+       progressBar.value = String(0);
+     }
+    
+    
   }
 }

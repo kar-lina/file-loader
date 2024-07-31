@@ -1,17 +1,17 @@
 .demo-wrapper {
-  background: #000;
   height: 100vh;
   width: 100vw;
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
 }
 .form-upload {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding: 80px 40px;
+  background: #ea6ae651;
+  border-radius: 20px;
 }
 
 .form-upload__label {
@@ -90,24 +90,25 @@ progress,
 }
 
 progress {
-  height: 5px;
+  height: 10px;
   margin-top: 25px;
   border: none;
-  background-color: #286C2D;
+  border-radius: 50%;
+  background-color: #609acc;
 }
 
 progress::-webkit-progress-bar {
   border: none;
-  background-color: #286C2D;
+  background-color: #609acc;
 }
 
 progress::-webkit-progress-value {
-  background-color: #41E847;
+  background-color: #1c30c6;
 }
 
 progress::-moz-progress-bar {
   border: none;
-  background-color: #41E847;
+  background-color: #1c30c6;
 }
 
 .form-upload__container {
