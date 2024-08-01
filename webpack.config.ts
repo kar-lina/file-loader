@@ -9,7 +9,7 @@ export default (env: EnvVariables) => {
   const paths: BuildPaths = {
     output: path.resolve(__dirname, 'build'),
     entry: path.resolve(__dirname, 'src', 'index.ts'),
-    html: path.resolve(__dirname, 'public', 'index.html'),
+    html: [path.resolve(__dirname, 'public', 'index.html'), path.resolve(__dirname, 'public', 'file.html')],
   };
   return buildWebpack({
     port: env.port ?? 3000,

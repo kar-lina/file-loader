@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.3",
-   
+    "file-include-webpack-plugin-replace": "latest",
     "@types/webpack": "^5.28.2",
     "@types/webpack-dev-server": "^4.7.2",
     "css-loader": "^6.8.1",
@@ -30,7 +30,5 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }

@@ -1,4 +1,3 @@
-import 'style.scss';
 
 export function fileLoaderInit() {
   const BYTES_IN_MB = 1048576;

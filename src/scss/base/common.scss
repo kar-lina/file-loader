@@ -1,0 +1,6 @@
+._title {
+  @include adaptiveValue("font-size", 40, 24);
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+}
