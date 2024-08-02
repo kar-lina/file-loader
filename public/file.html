@@ -4,24 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS & HTML & CSS Recepies</title>
+    <script defer src="../build/main.4a8ff6f047915a4f57ee.js?fd6df837ed7d96a79084"></script>
+    <script defer src="../build/main.4a8ff6f047915a4f57ee.js?72af45403870d7291642"></script>
   </head>
   <body>
-    <div class="demo-wrapper">
-      <div>
-        <form class="form-upload" id="uploadForm" method="post" enctype="multipart/form-data">
-          <label class="form-upload__label" for="uploadForm_File">
-            <span class="form-upload__title">Изображение:</span>
-            <input class="form-upload__input" id="uploadForm_File" type="file" name="file_name" accept="image/*" />
-          </label>
-          <input class="form-upload__submit form-upload__submit_purple" id="uploadForm_Submit" type="submit" value="Загрузить файл" />
-          <progress id="progressBar" value="0" max="100"></progress>
-          <div class="form-upload__container">
-            <span class="form-upload__status" id="uploadForm_Status"></span>
-            <span id="uploadForm_Size"></span>
-          </div>
-        </form>
+    <main>
+      <header class="recepies__header _header">
+        <div class="header__container">
+          <h1 class="recepies__title _title">Задача</h1>
+          <p>
+            Загрузка пользователем файлов на сервер — часто встречающаяся задача при создании сайтов и приложений. Если файлы большие, то хорошей практикой будет показывать
+            пользователю прогресс и результат загрузки файла. Для этого можно использовать прогресс-бар.
+          </p>
+          <p>
+            Организовать полный процесс загрузки файла возможно только с использованием серверной части, реализация которой выходит за рамки данной статьи. Поэтому далее будет
+            рассмотрена организация отправки файла на стороне клиента: HTML-разметка, стилизация элементов и JS-код для передачи файла на сервер.
+          </p>
+          <p>Загрузка файла на сервер состоит из трёх частей:</p>
+          <ol>
+            <li>Выбор пользователем файла на своём устройстве.</li>
+            <li>Проверка параметров обработки файла и формирование данных с обращением к серверу.</li>
+            <li>Обработка данных на сервере и отправка ответа.</li>
+          </ol>
+        </div>
+      </header>
+      <div class="file__container">
+        <h2 class="_title">Решение</h2>
+        <div class="_demo">
+          <form class="form-upload" id="uploadForm" method="post" enctype="multipart/form-data">
+            <label class="form-upload__label" for="uploadForm_File">
+              <span class="form-upload__title">Изображение:</span>
+              <input class="form-upload__input" id="uploadForm_File" type="file" name="file_name" accept="image/*" />
+            </label>
+            <input class="form-upload__submit form-upload__submit_purple" id="uploadForm_Submit" type="submit" value="Загрузить файл" />
+            <progress id="progressBar" value="0" max="100"></progress>
+            <div class="form-upload__container">
+              <span class="form-upload__status" id="uploadForm_Status"></span>
+              <span id="uploadForm_Size"></span>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
   <script src="../build/main.a497b94f5886695bcdef.js"></script>
 </html>

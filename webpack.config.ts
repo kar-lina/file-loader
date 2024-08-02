@@ -1,19 +1,21 @@
-import path from "path";
-import { buildWebpack } from "./config/buildWebpack";
-import { BuildMode, BuildPaths } from "./config/types/types";
+import path from 'path';
+import { buildWebpack } from './config/buildWebpack';
+import { BuildMode, BuildPaths } from './config/types/types';
 interface EnvVariables {
   mode: BuildMode;
   port: number;
 }
+const pages = ['index', 'file'].map((page) => ({ template: path.resolve(__dirname, 'public', `${page}.html`), filename: `${page}.html` }));
+
 export default (env: EnvVariables) => {
   const paths: BuildPaths = {
     output: path.resolve(__dirname, 'build'),
     entry: path.resolve(__dirname, 'src', 'index.ts'),
-    html: [path.resolve(__dirname, 'public', 'index.html'), path.resolve(__dirname, 'public', 'file.html')],
+    html: pages,
   };
   return buildWebpack({
     port: env.port ?? 3000,
     mode: env.mode ?? 'development',
-    paths
+    paths,
   });
 };

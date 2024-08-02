@@ -1,0 +1,16 @@
+.recepies {
+  padding: rem(20);
+    &__header {
+      padding: 40px 15px 20px;
+      background: $primaryColor;
+    }
+		&__title {}
+
+		&__list {
+      margin-top: rem(20);
+    }
+
+		&__item {}
+
+		&__link {}
+}

@@ -1,6 +1,6 @@
 export interface BuildPaths {
   entry: string;
-  html: string[];
+  html: Array<{template: string, filename: string}>;
   output: string;
 }
 export type BuildMode = 'production' | 'development';
