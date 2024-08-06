@@ -5,7 +5,7 @@ interface EnvVariables {
   mode: BuildMode;
   port: number;
 }
-const pages = ['index', 'file'].map((page) => ({ template: path.resolve(__dirname, 'public', `${page}.html`), filename: `${page}.html` }));
+const pages = ['index', 'file', 'dropdown'].map((page) => ({ template: path.resolve(__dirname, 'public', `${page}.html`), filename: `${page}.html` }));
 
 export default (env: EnvVariables) => {
   const paths: BuildPaths = {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Плавное раскрытие меню</title>
+    <script defer src="../build/main.4a8ff6f047915a4f57ee.js?fd6df837ed7d96a79084"></script>
+    <script defer src="../build/main.4a8ff6f047915a4f57ee.js?72af45403870d7291642"></script>
+  </head>
+  <body>
+    <main>
+      <header class="recepies__header _header">
+        <div class="header__container">
+          <h1 class="recepies__title _title">Задача</h1>
+          <p>Плавное раскрытие выпадающего меню.</p>
+        </div>
+      </header>
+      <div class="file__container">
+        <h2 class="_title">Решение</h2>
+        <div class="_demo">
+          <div class="dropdown">
+            <button class="button" aria-expanded="false" aria-controls="list">Меню</button>
+
+            <ul class="menu" id="list" aria-hidden="true">
+              <li class="menu-item">
+                <a href="#" class="menu-link" tabindex="-1">Винни-Пух</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link" tabindex="-1">Тигра</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link" tabindex="-1">Пятачок</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h2 class="_title">Разбор</h2>
+        <div class="_explanation">
+          <p>Раскрытие меню реализовано на чистом CSS за счет приминения единиц измерения lh для высоты строки и анимирования этого свойства.</p>
+          <p>Также были испрользованы два ARIA-атрибута — <strong>aria-expanded</strong> и <strong>aria-controls</strong>. Благодаря <strong>aria-expanded</strong> вспомогательные технологии расскажут, что список со ссылками свёрнут или развёрнут, а <strong>aria-controls</strong> свяжет для них кнопку и список на уровне разметки.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

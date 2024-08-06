@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS & HTML & CSS Recepies</title>
+    <title>File loader</title>
     <script defer src="../build/main.4a8ff6f047915a4f57ee.js?fd6df837ed7d96a79084"></script>
     <script defer src="../build/main.4a8ff6f047915a4f57ee.js?72af45403870d7291642"></script>
   </head>
@@ -43,6 +43,18 @@
               <span id="uploadForm_Size"></span>
             </div>
           </form>
+        </div>
+        <h2 class="_title">Разбор</h2>
+        <div class="_explanation">
+          <p>Для реализации индикатора загрузки использовалось API <code>XMLHttpRequest</code>.</p>
+          <p><code>XMLHttpRequest</code> – это встроенный в браузер объект, который даёт возможность делать HTTP-запросы к серверу без перезагрузки страницы. Он не очень часто используется в разработке, т.к. существует более пролвинутый и гибкий <code>fetch</code></p>
+          <p>В современной веб-разработке <code>XMLHttpRequest</code> используется по трём причинам:</p>
+          <ol>
+            <li>По историческим причинам: существует много кода, использующего <code>XMLHttpRequest</code>, который нужно поддерживать.</li>
+            <li>Необходимость поддерживать старые браузеры и нежелание использовать полифилы (например, чтобы уменьшить количество кода).</li>
+            <li>Потребность в функциональности, которую <code>fetch</code> пока что не может предоставить, к примеру, отслеживание прогресса отправки на сервер.</li>
+          </ol>
+          
         </div>
       </div>
     </main>

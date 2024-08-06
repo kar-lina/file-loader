@@ -1,0 +1,49 @@
+.dropdown {
+  .button {
+    inline-size: 100%;
+    padding: 0.5lh 1.5lh;
+    color: currentColor;
+    background-color: $accentColor;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    background-color: #fff;
+  }
+
+  .menu {
+    position: relative;
+    display: grid;
+    margin-block-start: 0.5lh;
+    background-color: $accentColor;
+    padding: 0;
+
+    overflow: hidden;
+    line-height: 0;
+    color: transparent;
+    transition: line-height 0.5s, color 0.5s;
+  }
+
+  .menu-item {
+    overflow: hidden;
+  }
+
+  .menu-link {
+    display: block;
+    padding: 0.5lh 80px;
+    transition: background-color 0.3s ease 0s;
+  }
+
+  .menu-link:hover,
+  .menu-link:focus-visible {
+    background-color: #fff;
+  }
+
+  .button.active ~ .menu {
+    line-height: 1.2;
+    color: currentColor;
+  }
+}

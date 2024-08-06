@@ -9,5 +9,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     },
     compress: true,
     port: options.port ?? 9000,
+    watchFiles: ['src/**/*', 'public/**/*'],
   };
 }

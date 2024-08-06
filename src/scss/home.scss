@@ -10,7 +10,9 @@
       margin-top: rem(20);
     }
 
-		&__item {}
+		&__item {
+      &:not(:last-child) {margin-bottom: rem(12)}
+    }
 
 		&__link {}
 }
